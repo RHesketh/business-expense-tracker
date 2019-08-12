@@ -1,9 +1,13 @@
-<div class="container">
-  <div class="row">
-    <div class="col">
+<div class="row">
+  <div class="col">
+    <% if current_user %>
       <p class="sign-in lead text-center">
-        Please <%= link_to('sign in', '#') %> to use the application.
+        Welcome. Please take a seat. We will begin shortly.
       </p>
-    </div>
+    <% else %>
+      <p class="sign-in lead text-center">
+        Please <%= link_to('sign in', sign_in_path) %> to use the application.
+      </p>
+    <% end %>
   </div>
 </div>
