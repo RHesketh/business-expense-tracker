@@ -1,10 +1,17 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "HomePages", type: :request do
-  describe "GET /home_page" do
-    it "works! (now write some real specs)" do
-      get root_path
-      expect(response).to have_http_status(200)
+feature 'Visiting the home page' do
+  # background do
+  #  User.make(email: 'user@example.com', password: 'caplin')
+  # end
+
+  context 'When not logged in' do
+    scenario 'User is offered a link to sign in' do
+      visit root_path
+      click_link 'sign in'
+      # expect(page.current_path).to eq '/sign_in' #change to sign_in_path
     end
   end
 end
