@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sign In</title>
-    <!-- If user is signed in, show <title>Expense Tracker</title> -->
+    <% if current_user %>>
+      <title>Expense Tracker</title>
+    <% else %>
+      <title>Sign In</title>
+    <% end %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
