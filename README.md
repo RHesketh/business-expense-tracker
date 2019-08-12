@@ -1,24 +1,6 @@
-# README
+# Business Expense Tracker
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Usage
+In order to use the site, you must first create a user. This can be done using a rake task:
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+`rake users:create[test@example.com,password]`
